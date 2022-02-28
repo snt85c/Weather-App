@@ -1,5 +1,5 @@
 import * as apiFunctions from "./APIFunctions"
-import { weatherData } from "../dist/weatherData"
+import { weatherData } from "./weatherData"
 
 const input = document.getElementById("input")
 const city = document.getElementById("city")
