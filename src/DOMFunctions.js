@@ -50,6 +50,8 @@ function dailyTemp() {
     let day = new Date().getDay() + 1;
     for (let i = 0; i < weekDaysDiv.length; i++) {
 
+        weekDaysDiv[i].innerHTML = ""
+
         if (day > 6) day = 0;
         let weekday = document.createElement("div");
         weekday.setAttribute("id", "weekday");
