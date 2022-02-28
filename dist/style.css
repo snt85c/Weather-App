@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+* {
+    font-family: "montserrat";
+    color: white;
+}
+
+html {
+    background: url(img/background.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 97%;
+}
+
+body {
+    padding: 3% 0% 0% 3%;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+
+#center {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+
+#input {
+    background-color: transparent;
+    border: none;
+    border-bottom: white solid 2px;
+}
+
+#input:focus {
+    outline: none;
+}
+
+#submit {
+    width: 20px;
+}
+
+#submit:hover {
+    cursor: pointer;
+}
+
+#main {
+    width: 150px;
+    padding-left: 10px;
+    border-radius: 20px;
+}
+
+#icon,
+#iconWeek {
+    width: 125px;
+}
+
+#city {
+    padding: 2px;
+    font-weight: bold;
+}
+
+#country {
+    padding: 2px;
+}
+
+#flag {
+    object-fit: contain;
+}
+
+#state {
+    display: flex;
+    flex-direction: row;
+}
+
+#temperature {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#description1 {
+    font-size: 40px;
+}
+
+#time {
+    font-size: 15px;
+}
+
+#sideElement {
+    font-size: 10px;
+    font-weight: bold;
+}
+
+#sideElementContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+#rightIcons {
+    width: 30px;
+    object-fit: contain;
+    margin-right: 5px;
+}
+
+#feelsLike,
+#humidity,
+#chanceOfPrecipitation,
+#windSpeed {
+    font-weight: 2em;
+}
+
+#bottom {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#sideElementContainer {
+    margin-right: 10px;
+}
+
+
+/* @media (max-width: 550px) {
+    #bottom {
+        flex-direction: column;
+    }
+    #weekday {
+        flex-direction: row;
+        text-align: center;
+    }
+    #iconWeek {
+        display: none;
+    }
+} */
+
+#weekday {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#descrBottom,
+#tempBottom,
+#minTempBottom {
+    font-weight: 100;
+    font-size: 1rem;
+    text-align: center;
+}
+
+#tempBottom {
+    font-weight: 100;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
