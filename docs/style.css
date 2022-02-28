@@ -50,7 +50,7 @@ body {
 }
 
 #main {
-    width: 150px;
+    width: 200px;
     padding-left: 10px;
     border-radius: 20px;
 }
@@ -61,12 +61,15 @@ body {
 }
 
 #city {
+    width: 100%;
     padding: 2px;
     font-weight: bold;
 }
 
 #country {
+    display: flex;
     padding: 2px;
+    align-items: center;
 }
 
 #flag {

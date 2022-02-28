@@ -10,7 +10,7 @@ function init() {
     if (lastSearch == "") {
         apiFunctions.geolocation()
     } else {
-        domFunctions.search(lastSearch)
+        apiFunctions.search(lastSearch)
     }
 }
 
@@ -20,14 +20,14 @@ setInterval(init, 600000);
 
 
 search.addEventListener("click", () => {
-    domFunctions.search(input.value)
+    apiFunctions.search(input.value)
     lastSearch = input.value
     input.value = "";
 })
 
 window.addEventListener("keypress", (e) => {
     if (e.key === "Enter") {
-        domFunctions.search(input.value)
+        apiFunctions.search(input.value)
         lastSearch = input.value
         input.value = "";
     }

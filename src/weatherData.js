@@ -53,7 +53,7 @@ class weatherData {
     }
 
     getTimezone() {
-        return this.data.timezone
+        return this.data.weatherData.timezone
     }
 
     getWeeklyDescr(i) {

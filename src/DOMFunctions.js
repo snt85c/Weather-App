@@ -1,6 +1,3 @@
-import * as apiFunctions from "./APIFunctions"
-import { weatherData } from "./weatherData"
-
 const city = document.getElementById("city")
 const flag = document.getElementById("flag")
 const country = document.getElementById("country")
@@ -15,23 +12,12 @@ const pop = document.getElementById("chanceOfPrecipitation")
 const windSpeed = document.getElementById("windSpeed")
 const weekDaysDiv = document.querySelectorAll("#weekday")
 
-let data
-
-//basic url for search. set for "london" if geolocation is off
-function url(inputValue) {
-    inputValue = inputValue == false ? "london" : inputValue;
-    return `https://api.openweathermap.org/geo/1.0/direct?q=${inputValue}&limit=5&appid=f01e320c417dd9583e7ed5e57fb13e71`;
-}
-
-//fetch a new set of data given the search value and populate the screen
-async function search(inputValue) {
-    data = new weatherData(await apiFunctions.getCoords(url(inputValue)));
-    currentTemp();
-}
+let data;
 
 ///populate the screen with information
-function currentTemp() {
+function currentTemp(exportedData) {
     try {
+        data = exportedData
         city.textContent = data.getCity()
         country.textContent = `(${data.getCountry()})`
         flag.src = data.getFlag();
@@ -101,4 +87,4 @@ function getTime() {
     setTimeout(getTime, 1000);
 }
 
-export { search }
+export { currentTemp }
