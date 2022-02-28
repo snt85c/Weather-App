@@ -1,7 +1,6 @@
 import * as apiFunctions from "./APIFunctions"
 import { weatherData } from "./weatherData"
 
-const input = document.getElementById("input")
 const city = document.getElementById("city")
 const flag = document.getElementById("flag")
 const country = document.getElementById("country")
